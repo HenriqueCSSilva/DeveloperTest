@@ -40,14 +40,14 @@
     </head>
     <body class="antialiased">
         
-    <button id ="btn_enviar" class="search-btn" type="submit">
-            <span>{{ __('Adicionar') }}</span>
-        </button>
+   
+        
 
-        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
-
-
-
+        <a class="nav-link link" href="{{ ('registerBusiness') }}">{{ __('Add Empresa') }}</a>
+        </br>
+        </br>
+        </br>
+        <!--
         @php $index=1 @endphp
         @foreach ($retorno as $busca)                
             <a class="mb-3">
@@ -56,6 +56,8 @@
             </a>                  
             @php  $index+=1 @endphp
         @endforeach
+
+        -->
 
 
 
@@ -73,22 +75,6 @@
 
             </table>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
        
     </body>
 </html>
@@ -114,7 +100,7 @@
 $('#example').DataTable( {   
      data: data,
      deferRender: true,
-     scrollY:        "400px",
+     scrollY:        "200px",
      scrollX:         "400px",
      scrollCollapse: true,
      scroller:       true,

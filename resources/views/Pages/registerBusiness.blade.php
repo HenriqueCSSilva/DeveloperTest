@@ -72,8 +72,13 @@
                 <div class="flex items-center">
                 
                     <form method="POST" action="{{ route('sucessoGravou') }}">
+
                     @csrf
+
                         <div class="d-flex mb-2">
+
+                        
+
                         <label class="label" for="titulo" >Titulo</label>                                                   
                         <input  type="text" name ="titulo" id="titulo">
                         </div>
