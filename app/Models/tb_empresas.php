@@ -23,10 +23,22 @@ class tb_empresas extends Model
 
     protected $table = 'empresas';
 
-    public static function consultaEmpresa ($protocolo){
-        $retorno = DB::table('empresas')->get();
+    public static function consultaEmpresa($request){
+        $busca  = $request->busca;
+
+        $retorno = tb_empresas::select()->where('titulo','LIKE','%'.$busca.'%')
+        ->orWhere('endereco','LIKE','%'.$busca.'%')
+        ->orWhere('cep','LIKE','%'.$busca.'%')
+        ->orWhere('cidade','LIKE','%'.$busca.'%')
+        ->orWhere('categoria','LIKE','%'.$busca.'%')
+        ->get();
         return $retorno;
+
+
+
     }
+
+    
 
 
     public static function gravaNovEmpresa(){

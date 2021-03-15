@@ -192,10 +192,10 @@
         </div>
     @endif
 
-    <form class="search-bar" method="POST" action="{{ route('register') }}">
+    <form class="search-bar" method="POST" action="{{ route('empresas') }}">
         @csrf
 
-        <input placeholder="   O que deseja buscar?" type="search" id="busca" name="search" pattern=".*\S.*" required>
+        <input placeholder="O que deseja buscar?" type="search" id="busca" name="busca" pattern=".*\S.*" required>
         <button id ="btn_enviar" class="search-btn" type="submit">
             <span>{{ __('Search') }}</span>
         </button>
